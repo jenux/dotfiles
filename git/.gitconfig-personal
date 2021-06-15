@@ -1,0 +1,32 @@
+[user]
+	name = Jenux
+	email = jenux@qq.com
+[init]
+    defaultBranch = main
+
+[core]
+	excludesfile = ~/.gitignore
+	filemode = false
+	autocrlf = false
+
+[credential]
+  helper = store
+
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+
+[http]
+    #proxy = http://www-proxy.abc.com:80
+
+[https]
+    #proxy = http://www-proxy.abc.com:80

@@ -1,0 +1,25 @@
+# Mac:
+*~
+.DS_Store
+node_modules
+
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Python:
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+
+# Codekit
+.sass-cache
+
+# My configurations:
+db.ini
+deploy_key_rsa
+
+.vscode
