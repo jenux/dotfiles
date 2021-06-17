@@ -16,5 +16,9 @@
 " Plug 'tpope/vim-surround " 包围符号
 Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}  " Markdown预览
 
+
+" Plug 'tpope/vim-surround " 包围符号
+Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}  " Markdown预览
+
 " 卸载/禁用~/.vimrc里的默认插件
 " UnPlug 'chxuan/prepare-code'

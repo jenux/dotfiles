@@ -2,7 +2,6 @@ export PATH=~/.local/bin:~/.bin:/usr/local/bin:$PATH
 
 
 # bash
-#alias ls='ls --color=auto' #Linux only
 alias ll='ls -lh'
 alias la='ls -A'
 alias lal='ls -alF'
@@ -39,10 +38,17 @@ alias stopsk="pkill -f screenkey"
 alias chwp="~/.dwm/chwp.sh"
 alias tq='curl wttr.in/Beijing'
 alias tqtz='curl wttr.in/Tongzhou'
-# alias open=xdg-open # Linux only
-# alias pbcopy='xsel --clipboard --input'
-# alias pbpaste='xsel --clipboard --output'
 
+if [ `uname -s` = 'Darwin' ]; then
+    # echo "Darwin"
+fi
+if [ `uname -s` = 'Linux' ]; then
+    # echo "Linux"
+    alias ls='ls --color=auto' #Linux only
+    alias open=xdg-open # Linux only
+    alias pbcopy='xsel --clipboard --input'
+    alias pbpaste='xsel --clipboard --output'
+fi
 
 # commands
 # rsync
@@ -53,6 +59,7 @@ alias tqtz='curl wttr.in/Tongzhou'
 # dframe    - deviceframe: put device frames around your web app screenshot
 # wtf       - translates acronyms and filename suffixes, e.g. wtf LOL
 # tig       - text-mode interface for git
+# stow      - dot file management
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
