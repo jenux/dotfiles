@@ -39,10 +39,10 @@ alias chwp="~/.dwm/chwp.sh"
 alias tq='curl wttr.in/Beijing'
 alias tqtz='curl wttr.in/Tongzhou'
 
-if [ `uname -s` = 'Darwin' ]; then
-    # echo "Darwin"
+if [ `uname` = 'Darwin' ]; then
+    echo "Darwin"
 fi
-if [ `uname -s` = 'Linux' ]; then
+if [ `uname` = 'Linux' ]; then
     # echo "Linux"
     alias ls='ls --color=auto' #Linux only
     alias open=xdg-open # Linux only
