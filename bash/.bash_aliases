@@ -22,10 +22,16 @@ alias mkcd='foo() { mkdir -p "$1"; cd "$1" }; foo '
 # show open ports
 alias ports='netstat -tulanp'
 
+# proxy
+alias setproxy="export ALL_PROXY=socks5://127.0.0.1:1080"
+alias noproxy="unset ALL_PROXY"
+
+
 # aliases for applications/programs
 alias vi=vim
 alias ra=ranger
 alias ifconfig=/sbin/ifconfig
+alias ip="curl -i http://ip.cn"
 alias ipen0='ipconfig getifaddr en0'
 alias ipdig='dig +short myip.opendns.com @resolver1.opendns.com'
 alias ipif='curl ifconfig.me'
@@ -40,7 +46,7 @@ alias tq='curl wttr.in/Beijing'
 alias tqtz='curl wttr.in/Tongzhou'
 
 if [ `uname` = 'Darwin' ]; then
-    echo "Darwin"
+    # echo "Darwin"
 fi
 if [ `uname` = 'Linux' ]; then
     # echo "Linux"
