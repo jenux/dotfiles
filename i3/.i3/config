@@ -167,10 +167,10 @@ set $ws1 1
 set $ws2 2
 set $ws3 3
 set $ws4 4
-set $ws5 BW
-set $ws6 ITP
-set $ws7 Firefox
-set $ws8 Mail 
+set $ws5 ⒌BW
+set $ws6 ⒍ITP
+set $ws7 ⒎Firefox
+set $ws8 ⒏Mail 
 
 # switch to workspace
 
