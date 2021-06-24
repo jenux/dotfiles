@@ -60,6 +60,7 @@ fi
 # wtf       - translates acronyms and filename suffixes, e.g. wtf LOL
 # tig       - text-mode interface for git
 # stow      - dot file management
+# zathura   - Linux pdf reader with vim style key binding 
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

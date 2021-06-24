@@ -69,6 +69,10 @@ bindsym $mod+z exec --no-startup-id morc_menu
 bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+p exec --no-startup-id "rofi -show run" 
 
+# Shutter: screenshot
+bindsym $mod+Shift+Ctrl+p exec shutter -s -e -o ~/Pictures/shot/%Y-%m-%d-%T.png
+bindsym $mod+Shift+p exec shutter -f -e -o ~/Pictures/shot/%Y-%m-%d-%T.png
+
 
 bindsym $mod+Return exec terminal
 bindsym $mod+0 mode "$mode_system"
