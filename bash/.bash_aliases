@@ -40,7 +40,7 @@ alias tq='curl wttr.in/Beijing'
 alias tqtz='curl wttr.in/Tongzhou'
 
 if [ `uname` = 'Darwin' ]; then
-    echo "Darwin"
+    # echo "Darwin"
 fi
 if [ `uname` = 'Linux' ]; then
     # echo "Linux"
