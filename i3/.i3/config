@@ -69,6 +69,10 @@ bindsym $mod+z exec --no-startup-id morc_menu
 bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+p exec --no-startup-id "rofi -show run" 
 
+# Shutter: screenshot
+bindsym $mod+Shift+Ctrl+p exec shutter -s -e -o ~/Pictures/shot/%Y-%m-%d-%T.png
+bindsym $mod+Shift+p exec shutter -f -e -o ~/Pictures/shot/%Y-%m-%d-%T.png
+
 
 bindsym $mod+Return exec terminal
 bindsym $mod+0 mode "$mode_system"
@@ -167,10 +171,10 @@ set $ws1 1
 set $ws2 2
 set $ws3 3
 set $ws4 4
-set $ws5 5
-set $ws6 6
-set $ws7 7
-set $ws8 Mail 
+set $ws5 ⒌BW
+set $ws6 ⒍ITP
+set $ws7 ⒎Firefox
+set $ws8 ⒏Mail 
 
 # switch to workspace
 
@@ -199,6 +203,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 # assign [class="Pale moon"] $ws2
 # assign [class="Pcmanfm"] $ws3
 # assign [class="Skype"] $ws5
+assign [class="firefox"] $ws7
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1

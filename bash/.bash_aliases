@@ -22,10 +22,16 @@ alias mkcd='foo() { mkdir -p "$1"; cd "$1" }; foo '
 # show open ports
 alias ports='netstat -tulanp'
 
+# proxy
+alias setproxy="export ALL_PROXY=socks5://127.0.0.1:1080"
+alias noproxy="unset ALL_PROXY"
+
+
 # aliases for applications/programs
 alias vi=vim
 alias ra=ranger
 alias ifconfig=/sbin/ifconfig
+alias ip="curl -i http://ip.cn"
 alias ipen0='ipconfig getifaddr en0'
 alias ipdig='dig +short myip.opendns.com @resolver1.opendns.com'
 alias ipif='curl ifconfig.me'
@@ -60,6 +66,7 @@ fi
 # wtf       - translates acronyms and filename suffixes, e.g. wtf LOL
 # tig       - text-mode interface for git
 # stow      - dot file management
+# zathura   - Linux pdf reader with vim style key binding 
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
