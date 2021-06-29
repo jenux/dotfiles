@@ -24,6 +24,9 @@
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
+    
+[icdiff]
+    options = --highlight --line-numbers
 
 [http]
     #proxy = http://www-proxy.abc.com:80
