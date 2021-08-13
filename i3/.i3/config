@@ -1,3 +1,11 @@
+# Conky
+# /usr/share/conky/conky_maia #桌面右侧的状态栏
+# /usr/share/conky/conky1.10_shortcuts_maia #桌面左侧的快捷键显示栏
+# 修改conky_maia支持中文
+# font = 'WenQuanYi Micro Hei:size=8',
+# 或者
+#font = 'WenQuanYi Zen Hei:size=8',
+
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
