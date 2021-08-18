@@ -105,7 +105,7 @@ bindsym $mod+slash exec xfce4-terminal --drop-down
 # split orientation
 bindsym $mod+h split h;exec notify-send 'tile horizontally'
 bindsym $mod+v split v;exec notify-send 'tile vertically'
-#bindsym $mod+q split toggle
+bindsym $mod+w split toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -175,14 +175,14 @@ bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 1
-set $ws2 2
+set $ws1 1MAIL
+set $ws2 2CODE
 set $ws3 3
 set $ws4 4
-set $ws5 ⒌BW
-set $ws6 ⒍ITP
-set $ws7 ⒎Firefox
-set $ws8 ⒏Mail 
+set $ws5 5
+set $ws6 6
+set $ws7 7
+set $ws8 FF
 
 # switch to workspace
 
@@ -207,11 +207,11 @@ bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Open applications on specific workspaces
-# assign [class="Thunderbird"] $ws1
+assign [class="Thunderbird"] $ws1
 # assign [class="Pale moon"] $ws2
 # assign [class="Pcmanfm"] $ws3
 # assign [class="Skype"] $ws5
-assign [class="firefox"] $ws7
+assign [class="firefox"] $ws8
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
