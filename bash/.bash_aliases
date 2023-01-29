@@ -19,6 +19,8 @@ alias ..3='cd ../../..'
 alias ..4='cd ../../../'
 alias ..5='cd ../../../..'
 
+
+alias n1='ssh root@10.147.17.234'
 alias www='python3 -m http.server'
 alias mkcd='foo() { mkdir -p "$1"; cd "$1" }; foo '
 
