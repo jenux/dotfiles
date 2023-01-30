@@ -22,6 +22,8 @@ $ git clone https://github.com/chxuan/vimplus.git ~/.vimplus
 $ cd ~/.vimplus && ./update.sh
 ```
 
+vimplus安装完后，执行`stow vim`加载自定义的`~/.vimrc.custom*`文件
+
 ### Oh-My-Zsh
 
 ``` shell
