@@ -1,0 +1,39 @@
+[user]
+	name = Jenux
+	email = jenux.wang@universalbeijing.com
+[init]
+    defaultBranch = main
+
+[core]
+	excludesfile = /Users/20000487/.gitignore-file
+	fileMode = false
+	autocrlf = false
+
+[credential]
+  helper = store
+
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+    
+[icdiff]
+  options = --highlight --line-numbers
+
+[http]
+  #proxy = http://www-proxy.abc.com:80
+
+[https]
+	#proxy = http://www-proxy.abc.com:80
+
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

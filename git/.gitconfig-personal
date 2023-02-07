@@ -5,7 +5,7 @@
     defaultBranch = main
 
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore-file
 	filemode = false
 	autocrlf = false
 
