@@ -109,3 +109,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/.bash_aliases
 [ -s "~/.bash_aliases_20000487" ] && source "~/.bash_aliases_20000487"
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPTS="--height 80% --layout=reverse --border --preview '~/.fzf-scope.sh {} '"
+export FZF_DEFAULT_COMMAND="fd --exclude={.wine,.git,.idea,.vscode,.sass-cache,node_modules,build,.local,.steam,.m2,.rangerdir,.ssh,.ghidra,.mozilla} --type f --hidden --follow"

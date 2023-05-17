@@ -1,4 +1,5 @@
 export PATH=~/.local/bin:~/.bin:/usr/local/bin:$PATH
+export BAT_THEME="Dracula"
 
 alias icat="kitty +kitten icat"
 
@@ -51,6 +52,7 @@ alias stopsk="pkill -f screenkey"
 alias chwp="~/.dwm/chwp.sh"
 alias tq='curl wttr.in/Beijing'
 alias tqtz='curl wttr.in/Tongzhou'
+alias cat=bat
 
 if [ `uname` = 'Darwin' ]; then
     # echo "Darwin"
@@ -64,6 +66,7 @@ if [ `uname` = 'Linux' ]; then
 fi
 
 # commands
+# ranger    - A VIM-inspired filemanager for console
 # rsync
 # axel      - download tool
 # ncdu      - disk usage analyzer with an ncurses interface
@@ -74,6 +77,13 @@ fi
 # tig       - text-mode interface for git
 # stow      - dot file management
 # zathura   - Linux pdf reader with vim style key binding 
+# fzf       - command line fuzzy finder
+# glow      - Render markdown on the CLI
+# fd        - A simple, fast and user-friendly alternative to 'find'
+# bat       - A cat clone with syntax highlighting and Git integration
+
+
+# brew install imagemagick # ranger render image may required 
 
 # JDK
 [ -s /usr/local/opt/openjdk/bin ] && export PATH="/usr/local/opt/openjdk/bin:$PATH"
@@ -93,3 +103,14 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+
+_fzf_comprun() {
+  local command=$1
+  shift
+
+  case "$command" in
+    cd) fzf "$@" --preview 'tree -C {} | head -200' ;;
+    *)  fzf "$@" ;;
+  esac
+}
