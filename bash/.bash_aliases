@@ -54,9 +54,9 @@ alias tq='curl wttr.in/Beijing'
 alias tqtz='curl wttr.in/Tongzhou'
 alias cat=bat
 
-if [ `uname` = 'Darwin' ]; then
+#if [ `uname` = 'Darwin' ]; then
     # echo "Darwin"
-fi
+#fi
 if [ `uname` = 'Linux' ]; then
     # echo "Linux"
     alias ls='ls --color=auto' #Linux only
