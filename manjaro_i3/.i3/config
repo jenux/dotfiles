@@ -56,21 +56,25 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 
 
 ################### Key Binding ##############################################################
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+q mode "$mode_system"
 
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# endeavour
+# bindsym $mod+Shift+e exec ~/.config/i3/scripts/powermenu
+
 # Lock Screen
 bindsym $mod+Ctrl+l exec --no-startup-id blurlock
+# bindsym $mod+l exec ~/.config/i3/scripts/blur-lock
 
 # Border
-bindsym $mod+u border none
-bindsym $mod+y border pixel 1
-bindsym $mod+n border normal
+bindsym $mod+Shift+u border none
+bindsym $mod+Shift+y border pixel 1
+bindsym $mod+Shift+n border normal
 
 # Menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -96,16 +100,15 @@ bindsym $mod+9 exec --no-startup-id blurlock
 
 bindsym $mod+a focus parent
 bindsym $mod+q kill
-bindsym $mod+e exec nemo
 bindsym $mod+f fullscreen toggle
 bindsym $mod+r mode "resize"
-bindsym $mod+slash exec xfce4-terminal --drop-down
+#bindsym $mod+slash exec xfce4-terminal --drop-down
 
 
 # split orientation
 bindsym $mod+h split h;exec notify-send 'tile horizontally'
 bindsym $mod+v split v;exec notify-send 'tile vertically'
-bindsym $mod+w split toggle
+#bindsym $mod+w split toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -115,14 +118,14 @@ bindsym $mod+Shift+space floating toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+t layout tabbed
-bindsym $mod+c layout toggle split
+bindsym $mod+/ layout toggle split
 
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+l focus up
 bindsym $mod+semicolon focus right
-bindsym $mod+Tab focus left
+# bindsym $mod+Tab focus left
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -145,6 +148,8 @@ bindsym $mod+Shift+Right move right
 #navigate workspaces next / previous
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
 
 
 # workspace back and forth (with/without active container)
@@ -162,12 +167,15 @@ bindsym $mod+Shift+minus move scratchpad
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+minus scratchpad show
 
+bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+
+
+# App shortcuts
+bindsym $mod+e exec nemo
+#bindsym $mod+n exec /usr/bin/thunar
 
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
-
-bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
-
 
 
 
