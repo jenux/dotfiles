@@ -37,7 +37,7 @@ alias noproxy="unset ALL_PROXY"
 
 # aliases for applications/programs
 alias vi=vim
-alias ra=ranger
+alias ra=joshuto
 alias ifconfig=/sbin/ifconfig
 alias ip="curl -i http://ip.cn"
 alias ipen0='ipconfig getifaddr en0'
