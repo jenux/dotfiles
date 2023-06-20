@@ -86,6 +86,7 @@ keymap = [
 
 	{ keys = [ " " ],		      command = "select --toggle=true" },
 	{ keys = [ "t" ],		      command = "select --all=true --toggle=true" },
+	{ keys = [ "v", "a" ],		command = "select --all=true --toggle=true" },
 	{ keys = [ "V" ],		      command = "toggle_visual"},
 
 	{ keys = [ "w" ],		      command = "show_tasks --exit-key=w" },
@@ -104,6 +105,7 @@ keymap = [
 	{ keys = [ "\\" ],		    command = ":search_glob " },
   { keys = [ "S" ],		      command = "search_fzf" },
 	{ keys = [ "C" ],		      command = "subdir_fzf" },
+	{ keys = [ "F" ],		      command = "subdir_fzf" },
 
 	{ keys = [ "n" ],		      command = "search_next" },
 	{ keys = [ "N" ],		      command = "search_prev" },
@@ -124,7 +126,9 @@ keymap = [
 	{ keys = [ "g", "d" ],		command = "cd ~/Downloads" },
 	{ keys = [ "g", "e" ],		command = "cd /etc" },
 	{ keys = [ "g", "h" ],		command = "cd ~/" },
-	{ keys = [ "?" ],		      command = "help" }
+	{ keys = [ "?" ],		      command = "help" },
+
+	{ keys = [ "ctrl+g" ],		command = ":shell lazygit" }
 ]
 
 [task_view]

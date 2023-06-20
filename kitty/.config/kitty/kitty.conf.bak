@@ -742,6 +742,8 @@ mouse_map ctrl+left press ungrabbed,grabbed mouse_click_url
 #: as number of cells instead of pixels.
 
 # enabled_layouts *
+map cmd+shift+t goto_layout tall
+map cmd+shift+s goto_layout stack
 
 #: The enabled window layouts. A comma separated list of layout names.
 #: The special value all means all layouts. The first listed layout
@@ -1895,10 +1897,12 @@ mouse_map ctrl+left press ungrabbed,grabbed mouse_click_url
 #: Next window
 
 # map kitty_mod+] next_window
+map kitty_mod+j next_window
 
 #: Previous window
 
 # map kitty_mod+[ previous_window
+map kitty_mod+k previous_window
 
 #: Move window forward
 
@@ -2265,6 +2269,7 @@ mouse_map ctrl+left press ungrabbed,grabbed mouse_click_url
 #: Reload kitty.conf
 
 # map kitty_mod+f5 load_config_file
+map ctrl+cmd+,   load_config_file
 
 #::  Reload kitty.conf, applying any changes since the last time it
 #::  was loaded. Note that a handful of options cannot be dynamically
@@ -2321,15 +2326,10 @@ mouse_map ctrl+left press ungrabbed,grabbed mouse_click_url
 #::      map ctrl+alt+a send_text normal,application some command with arguments\r
 
 #: Open kitty Website
+
 map shift+cmd+/ open_url https://sw.kovidgoyal.net/kitty/
 
-map cmd+shift+t goto_layout tall
-map cmd+shift+s goto_layout stack
-map cmd+shift+j next_window
-map cmd+shift+k previous_window
-map cmd+shift+, load_config_file
-map ctrl+cmd+,  load_config_file
-#: hide macOS kitty application
+#: Hide macOS kitty application
 
 # map cmd+h hide_macos_app
 
@@ -2351,6 +2351,6 @@ map ctrl+cmd+,  load_config_file
 
 
 # BEGIN_KITTY_THEME
-# Default
+# Alien Blood
 include current-theme.conf
 # END_KITTY_THEME
